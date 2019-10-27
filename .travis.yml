@@ -1,0 +1,11 @@
+language: ruby
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: u7H1ySB25tJbJbrlXF5YZrLaZyHhw611ViDjtVyLGK+2UR0IQq21vWJ/gy2V31YC0T8Abhy3j88NVe3uaaIMC3Ufe+JUslH8UpPlkoxvH2W9vpQ3KDfhFlH20MaWsbCWn/1OHV3wOAmvgWlk8Eu4XDJRR3I1hjJc8Eht6TBsN8yACuzS85GSWktOkzYDoRHP4tVo/+qgRjzAOZvRhBhrXSwqY19A4LuUbDRUb9z8Egxd3T/o/PatBohA6e7D3Md/v+h04AuLySTJo2BUPQPAk6P5ojMLuWn7oKJVFHo6EsQ5SFujjIt+FUQzMOx18XESy0/Pnv+b4G+lKrp0fx6onrjMGOxX2BnLCKNK6fW2tNMDt03b5cjTZpgAZP7/kftEe2d015v3j/4k68w55bW0J9Lg/Z+yqOIY8YSjjKxNNXXYN9fbSaz/N9MNxf+30CYMJoyPbQ8ZY5vbOlamBKwCdUPp7CGDUBxysn11Sz1ATBK1kmeJ83YDZmw/yC9V662FdK9MrwnOhAbJrWPUMaJlAfdlXj7TLQiSi0Lm+w1x6yVWTr6j2QwzrsKbBIAUJOC3hx7zrEQp1DDkxeVEKn2c1bHeSm8eQD6JTcOKCBYdSYDuUjZfTSxXtSQvyaFlh620UoOGpegr5IwP5zF70u6nI4U9OArS7z4LNRkDUb9WKu8=

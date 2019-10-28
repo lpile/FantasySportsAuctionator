@@ -31,10 +31,19 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use SimpleCov for test coverage
 gem 'simplecov', require: false, group: :test
 
+# Use Devise for user authentication
+gem 'devise'
+
+# Use for styling
+gem 'bootstrap', '~> 4.3.1'
+gem 'jquery-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'capybara'
   gem 'factory_bot_rails'
+  gem 'pry'
   gem 'rspec-rails'
   gem 'shoulda-matchers'
 end
